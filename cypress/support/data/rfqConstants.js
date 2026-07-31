@@ -93,11 +93,11 @@ export const INVALID_PRECISION_QUANTITIES = [
 //data for testing valid user references
 export const VALID_USER_REFERENCES = [
     {
-        userReference: 'user_ref_less_than_64_chars',
+        usernameRef: 'user_ref_less_than_64_chars',
         description: 'less than 64 characters'
     },
     {
-        userReference: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+        usernameRef: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
         description: 'exactly 64 characters'
     }
 ];

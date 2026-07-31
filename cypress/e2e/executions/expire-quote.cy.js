@@ -25,8 +25,8 @@ describe('Test Suite: RFQ EXPIRE QUOTE Tests', () => {
         });
     });
 
-    
-// ---------INVALID EXPIRE QUOTE TEST CASES----------------
+
+    // ---------INVALID EXPIRE QUOTE TEST CASES----------------
     it('TC 02: expireQuote API rejects expiring a quote that has already  been expired', () => {
         freshQuote().then((quoteId) => {
             expireQuote(quoteId).then((first) => {
@@ -59,18 +59,12 @@ describe('Test Suite: RFQ EXPIRE QUOTE Tests', () => {
 
 
 
-    it('TC 04: expireQuote API rejects expiring a quote that has empty quoteId', () => {
-        freshQuote().then((quoteId) => {
-            executeQuote(quoteId).then(() => {
-                expireQuote(quoteId, { allowedToFail: true }).then((res) => {
-                    expect(res.status).to.eq(400);
-
-                    expect(res.body.errors[0].message).to.exist;
-                    expect(res.body.errors[0].message).to.eq(`data/quoteId must be string`);
-
-                });
-            });
+    it('TC 04: expireQuote API rejects when quoteId is not a string', () => {
+        expireQuote({}, { allowedToFail: true }).then((res) => {
+            expect(res.status).to.eq(400);
+            expect(res.body.errors[0].message).to.exist;
+            expect(res.body.errors[0].message).to.eq('data/quoteId must be string');
         });
-    });
+    });;
 
 });

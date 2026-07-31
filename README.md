@@ -51,17 +51,16 @@ cypress/
     execute-quote.cy.js
     expire-quote.cy.js
   support/
-    auth/sign.js                   - HMAC-SHA384 signer (Node task)
+    auth/sign.js                    - HMAC-SHA384 signer (Node task)
     client/executions/
-      rfqClient.js                  funct builder per endpoint
-      rfqHelpers.js                  helpers for routine task
-    data/rfqConstants.js           houses ack types, any other constant used for test
-    schemas/*.schema.json           response contracts for successful API responses
+      rfqClient.js                  - one signed-request function per endpoint
+      rfqHelpers.js                 - helpers for routine setup (e.g. freshQuote)
+    data/rfqConstants.js            - ack types, account id, and test data tables
+    schemas/*.schema.json           - response contracts for successful API responses
 cypress.config.js
-.env.example
 README.md
-EXERCISE_NOTES.md              assumptions, caveats, challenges, and findings documented
-TEST_PLAN_COVERAGE.md       test case matrix
+EXERCISE_NOTES.md              - assumptions, caveats, challenges, and findings
+TEST_PLAN_COVERAGE.md          - test case matrix
 ```
 
 ## Dependencies

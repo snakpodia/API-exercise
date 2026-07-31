@@ -2,7 +2,7 @@ import { getQuote } from '../../support/client/executions/rfqClient';
 import { ACK_TYPES, EXTREME_QUANTITIES, LOW_QUANTITIES, INVALID_TICKERS, ACCOUNT_ID, INVALID_DELIVER_QUANTITIES, INVALID_PRECISION_QUANTITIES } from '../../support/data/rfqConstants';
 import getQuoteAckSchema from '../../support/schemas/getQuoteAck.schema.json';
 
-describe('Test Suite: RFQ API Tests', () => {
+describe('Test Suite: RFQ GET QUOTE Tests', () => {
 
     //----------VALID ARGUMENT TEST CASES----------------
     it('TC 01: getQuote API returns a valid buy quote with deliverQuantity specified', () => {
