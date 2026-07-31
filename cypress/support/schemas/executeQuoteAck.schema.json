@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": ["type", "data"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["rfqExecuteQuoteAck"]
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "accountId",
+        "quoteId",
+        "tradeDate",
+        "valueDate"
+      ],
+      "properties": {
+        "accountId": {
+          "type": "string"
+        },
+        "quoteId": {
+          "type": "string"
+        },
+        "tradeDate": {
+          "type": "string"
+        },
+        "valueDate": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "required": ["type", "data"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["rfqCreateQuoteAck"]
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "accountId",
+        "quoteId",
+        "symbol",
+        "side",
+        "receiveCurrency",
+        "deliverCurrency",
+        "quoteTime",
+        "expireTime",
+        "price",
+        "deliverQuantity",
+        "receiveQuantity"
+      ],
+      "properties": {
+        "accountId": {
+          "type": "string"
+        },
+        "quoteId": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "side": {
+          "type": "string",
+          "enum": ["buy", "sell"]
+        },
+        "receiveCurrency": {
+          "type": "string"
+        },
+        "deliverCurrency": {
+          "type": "string"
+        },
+        "quoteTime": {
+          "type": "number"
+        },
+        "expireTime": {
+          "type": "number"
+        },
+        "price": {
+          "type": "string"
+        },
+        "deliverQuantity": {
+          "type": "string"
+        },
+        "receiveQuantity": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
